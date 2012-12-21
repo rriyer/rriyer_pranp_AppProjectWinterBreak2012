@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         Button logIn = (Button)findViewById(R.id.button1);
         logIn.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
-        		 TextView username = (TextView)findViewById(R.id.editText1);
+        		TextView username = (TextView)findViewById(R.id.editText1);
  				String name = username.getText().toString();
  				TextView password = (TextView)findViewById(R.id.editText2);
  				String pass = password.getText().toString();
