@@ -23,15 +23,6 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       Parse.initialize(this, "vItvRJsLWYhzWhxkbuh2KKpZNhRhxt47PpgFGVTR", "bQp1KR79ejBDspaQPd3j8swx4CEGUseEDGf0gZuT");
-
-		
-		ParseUser.enableAutomaticUser();
-		ParseACL defaultACL = new ParseACL();
-	    
-		defaultACL.setPublicReadAccess(true);
-		
-		ParseACL.setDefaultACL(defaultACL, true);
 		
         Button signUp = (Button)findViewById(R.id.button2);
         Button logIn = (Button)findViewById(R.id.button1);
@@ -42,35 +33,44 @@ public class MainActivity extends Activity {
  				TextView password = (TextView)findViewById(R.id.editText2);
  				String pass = password.getText().toString();
  				 Log.i("logging in", "The login button was hit");
- 				//signIn(name,pass);
+ 				ParseUser.logInInBackground(name,pass, new LogInCallback() {
+ 					  public void done(ParseUser user, ParseException e) {
+ 					    if (user != null) {
+ 					    	Log.i("login", "\n\n\n\n\n\n\nSign in was successful");
+ 					    	//Intent request = new Intent(ParseStarterProjectActivity.this,PostActivity.class);
+ 					    	//startActivity(request);
+ 					    } else {
+ 					     Log.i("login", "user could not be successfully logged in");
+ 					    }
+ 					  }
+ 					});
         	}
         });
         signUp.setOnClickListener(new OnClickListener(){
 			public void onClick(View v){
 				TextView username = (TextView)findViewById(R.id.editText1);
-				String name = username.getText().toString();
+				String name = "a";//username.getText().toString();
 				TextView password = (TextView)findViewById(R.id.editText2);
-				String pass = password.getText().toString();
+				String pass ="a"; //password.getText().toString();
 				Log.i("signing up", "the signup button was hit");
-				createAccount(name,pass);
+				ParseUser user = new ParseUser();
+				user.setUsername(name);
+				user.setPassword(pass);
+				user.signUpInBackground(new SignUpCallback(){
+					public void done (ParseException e){
+						if(e == null){
+							Log.i("create account", "youre account was successfullly created");
+						}
+						else{
+							Log.i("create account", "You could not sign in for some reason");
+						}
+					}
+				});
 			}
 		});
     }
-    // 
     public void createAccount(String username, String password){
-		ParseUser user = new ParseUser();
-		user.setUsername(username);
-		user.setPassword(password);
-		user.signUpInBackground(new SignUpCallback(){
-			public void done (ParseException e){
-				if(e == null){
-					Log.i("create account", "youre account was successfullly created");
-				}
-				else{
-					Log.i("create account", "You could not sign in for some reason");
-				}
-			}
-		});
+		
 	}
     public void signIn(String username, String password){
 		ParseUser.logInInBackground(username,password, new LogInCallback() {
