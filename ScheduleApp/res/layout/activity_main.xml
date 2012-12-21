@@ -12,17 +12,6 @@
         android:ems="10"
         android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="200dp"
-        android:layout_height="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        android:text="@string/Email"
-        android:textColor="#2C75FF"
-        android:textSize="20dp" />
-
     <Button
         android:id="@+id/button1"
         style="@android:style/ButtonBar"
@@ -34,7 +23,7 @@
         android:background="#000000"
         android:text="@string/Login"
         android:textColor="#2C75FF"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
     
     <Button
         android:id="@+id/button2"
@@ -47,26 +36,36 @@
         android:background="#000000"
         android:text="@string/Register"
         android:textColor="#2C75FF"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="200dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/editText2"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_marginBottom="31dp"
+        android:layout_centerHorizontal="true"
         android:text="@string/Password"
         android:textColor="#2C75FF"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:text="@string/Email"
+        android:textColor="#2C75FF"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
+        android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textEmailAddress" />
 

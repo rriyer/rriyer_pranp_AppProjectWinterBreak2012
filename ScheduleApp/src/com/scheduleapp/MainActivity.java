@@ -1,5 +1,4 @@
 package com.scheduleapp;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.app.NavUtils;
-
+import android.util.Log;
 import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
@@ -17,18 +16,28 @@ import com.parse.SignUpCallback;
 import android.widget.*;
 import android.view.*;
 import android.view.View.*;
+import com.parse.*;
 public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+       Parse.initialize(this, "vItvRJsLWYhzWhxkbuh2KKpZNhRhxt47PpgFGVTR", "bQp1KR79ejBDspaQPd3j8swx4CEGUseEDGf0gZuT");
+
+		
+		ParseUser.enableAutomaticUser();
+		ParseACL defaultACL = new ParseACL();
+	    
+		defaultACL.setPublicReadAccess(true);
+		
+		ParseACL.setDefaultACL(defaultACL, true);
+		
         Button signUp = (Button)findViewById(R.id.button2);
         Button logIn = (Button)findViewById(R.id.button1);
         logIn.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
-        		 TextView username = (TextView)findViewById(R.id.editText1);
+        		TextView username = (TextView)findViewById(R.id.editText1);
  				String name = username.getText().toString();
  				TextView password = (TextView)findViewById(R.id.editText2);
  				String pass = password.getText().toString();
@@ -45,7 +54,7 @@ public class MainActivity extends Activity {
 			}
 		});
     }
-    //
+    // 
     public void createAccount(String username, String password){
 		ParseUser user = new ParseUser();
 		user.setUsername(username);
@@ -53,10 +62,10 @@ public class MainActivity extends Activity {
 		user.signUpInBackground(new SignUpCallback(){
 			public void done (ParseException e){
 				if(e == null){
-					System.out.println("You have created a new account ");	
+					Log.i("create account", "youre account was successfullly created");
 				}
 				else{
-					System.out.println("You could not sign in for some reason");
+					Log.i("create account", "You could not sign in for some reason");
 				}
 			}
 		});
@@ -65,11 +74,11 @@ public class MainActivity extends Activity {
 		ParseUser.logInInBackground(username,password, new LogInCallback() {
 			  public void done(ParseUser user, ParseException e) {
 			    if (user != null) {
-			    	System.out.println("\n\n\n\n\n\n\nSign in was successful");
+			    	Log.i("login", "\n\n\n\n\n\n\nSign in was successful");
 			    	//Intent request = new Intent(ParseStarterProjectActivity.this,PostActivity.class);
 			    	//startActivity(request);
 			    } else {
-			     System.out.println("user could not be successfully logged in");
+			     Log.i("login", "user could not be successfully logged in");
 			    }
 			  }
 			});
