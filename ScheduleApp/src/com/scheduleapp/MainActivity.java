@@ -41,7 +41,8 @@ public class MainActivity extends Activity {
  				String name = username.getText().toString();
  				TextView password = (TextView)findViewById(R.id.editText2);
  				String pass = password.getText().toString();
- 				signIn(name,pass);
+ 				 Log.i("logging in", "The login button was hit");
+ 				//signIn(name,pass);
         	}
         });
         signUp.setOnClickListener(new OnClickListener(){
@@ -50,6 +51,7 @@ public class MainActivity extends Activity {
 				String name = username.getText().toString();
 				TextView password = (TextView)findViewById(R.id.editText2);
 				String pass = password.getText().toString();
+				Log.i("signing up", "the signup button was hit");
 				createAccount(name,pass);
 			}
 		});
