@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
-
+import com.parse.Parse;
 public class MainActivity extends Activity {
 
     @Override
