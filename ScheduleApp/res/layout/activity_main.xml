@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="126dp"
+        android:layout_marginTop="90dp"
         android:ems="10"
         android:inputType="textEmailAddress" />
 
@@ -28,7 +28,7 @@
         android:layout_height="20dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="Password"
         android:textSize="20dp" />
 
@@ -36,23 +36,20 @@
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="14dp"
         android:ems="10"
-        android:inputType="textPassword" >
-
-        <requestFocus />
-    </EditText>
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button1"
         style="@android:style/ButtonBar"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp"
+        android:layout_marginTop="28dp"
         android:text="Login" />
 
 </RelativeLayout>
