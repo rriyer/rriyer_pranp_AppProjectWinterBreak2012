@@ -8,7 +8,7 @@ import android.support.v4.app.NavUtils;
 
 public class LoginActivity extends Activity {
 
-/*    @Override
+   @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -19,6 +19,6 @@ public class LoginActivity extends Activity {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
-*/
+
     
 }//test another change
