@@ -13,9 +13,6 @@ import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
-import com.parse.starter.ParseStarterProjectActivity;
-import com.parse.starter.PostActivity;
-import com.parse.starter.R;
 
 import android.widget.*;
 import android.view.*;
