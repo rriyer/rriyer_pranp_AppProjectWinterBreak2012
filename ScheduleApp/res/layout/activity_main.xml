@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+<<<<<<< HEAD
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
@@ -12,6 +13,8 @@
         android:ems="10"
         android:inputType="textPassword" />
 
+=======
+>>>>>>> 2f0f7a40d09f8226a3005dd4aef706a5b9262ddb
     <Button
         android:id="@+id/button1"
         style="@android:style/ButtonBar"
@@ -37,16 +40,8 @@
         android:text="@string/Register"
         android:textColor="#2C75FF"
         android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:text="@string/Password"
-        android:textColor="#2C75FF"
-        android:textSize="20sp" />
+<<<<<<< HEAD
+=======
 
     <TextView
         android:id="@+id/textView1"
@@ -68,5 +63,45 @@
         android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textEmailAddress" />
+>>>>>>> 2f0f7a40d09f8226a3005dd4aef706a5b9262ddb
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Password"
+        android:textColor="#2C75FF"
+        android:textSize="20sp" />
+<<<<<<< HEAD
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:text="@string/Email"
+        android:textColor="#2C75FF"
+        android:textSize="20sp" />
+=======
+>>>>>>> 2f0f7a40d09f8226a3005dd4aef706a5b9262ddb
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+=======
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+>>>>>>> 2f0f7a40d09f8226a3005dd4aef706a5b9262ddb
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPassword" />
 
 </RelativeLayout>
