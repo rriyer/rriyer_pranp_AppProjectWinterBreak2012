@@ -35,7 +35,7 @@
         android:layout_marginTop="62dp"
         android:text="@string/Email"
         android:textColor="#2C75FF"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/editText1"
@@ -70,6 +70,6 @@
         android:layout_marginBottom="14dp"
         android:text="@string/Password"
         android:textColor="#2C75FF"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
     
 </RelativeLayout>
