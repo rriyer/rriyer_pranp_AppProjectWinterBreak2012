@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
     
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/passwordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -13,12 +13,12 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/loginButton"
         style="@android:style/ButtonBar"
         android:layout_width="270dp"
         android:gravity="center"
         android:layout_height="50dp"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/passwordText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="62dp"
         android:background="#000000"
@@ -27,7 +27,7 @@
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/emailString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -38,23 +38,23 @@
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/emailText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/emailString"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textEmailAddress" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/registerButton"
         style="@android:style/ButtonBar"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignRight="@+id/button1"
-        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_alignRight="@+id/loginButton"
+        android:layout_below="@+id/loginButton"
         android:layout_marginTop="15dp"
         android:background="#000000"
         android:text="@string/Register"
@@ -62,10 +62,10 @@
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/passwordString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
+        android:layout_above="@+id/passwordText"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="14dp"
         android:text="@string/Password"
