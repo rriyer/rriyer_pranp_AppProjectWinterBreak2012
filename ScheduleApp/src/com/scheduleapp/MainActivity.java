@@ -9,6 +9,7 @@ import android.support.v4.app.NavUtils;
 import android.util.Log;
 import com.parse.LogInCallback;
 import com.parse.Parse;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -23,7 +24,18 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Parse.initialize(this, "vm8VbHKNuI5VafZretEpUzSO2RmHr7oumthIYrdr", "KSXzP0UzuRyYw7UWWofD7R2zUmS5crp5vGq8Sr1W");
+
+
+		ParseUser.enableAutomaticUser();
+		ParseACL defaultACL = new ParseACL();
+	    
+		// If you would like all objects to be private by default, remove this line.
+		defaultACL.setPublicReadAccess(true);
 		
+		ParseACL.setDefaultACL(defaultACL, true);
+		ParseObject a = new ParseObject("test");
+		a.put("foo", "bar");
         Button signUp = (Button)findViewById(R.id.button2);
         Button logIn = (Button)findViewById(R.id.button1);
         logIn.setOnClickListener(new OnClickListener(){
