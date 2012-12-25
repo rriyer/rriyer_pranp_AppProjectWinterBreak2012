@@ -1,6 +1,105 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#000000">
 
-</RelativeLayout>
+	<TableRow
+	    android:id="@+id/tableRow1"
+	    android:background="#00CCCC"
+		android:layout_width="fill_parent"
+		android:layout_margin="1dp" 
+		android:layout_height="match_parent"
+		android:layout_weight="1" 
+		android:gravity="center_vertical" >
+		<TextView 
+		    android:text="@string/Sunday"
+		    android:textSize="20dp"
+		    android:layout_marginLeft="10dp" />
+	</TableRow>
+
+	<TableRow
+		android:id="@+id/tableRow2"
+		android:background="#00CCCC"
+		android:layout_width="fill_parent"
+		android:layout_margin="1dp" 
+		android:layout_height="match_parent"
+		android:layout_weight="1" 
+		android:gravity="center_vertical" >
+        <TextView 
+            android:text="@string/Monday"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
+	</TableRow>
+
+	<TableRow
+		android:id="@+id/tableRow3"
+		android:background="#00CCCC"
+		android:layout_width="fill_parent"
+		android:layout_margin="1dp" 
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center_vertical" >
+        <TextView 
+            android:text="@string/Tuesday"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
+	</TableRow>
+
+	<TableRow
+		android:id="@+id/tableRow4"
+		android:background="#00CCCC"
+		android:layout_width="fill_parent"
+		android:layout_margin="1dp" 
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center_vertical" >
+        <TextView 
+            android:text="@string/Wednesday"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
+	</TableRow>
+        
+	<TableRow
+		android:id="@+id/tableRow5"
+		android:background="#00CCCC"
+		android:layout_width="fill_parent"
+		android:layout_margin="1dp" 
+		android:layout_height="match_parent" 
+		android:layout_weight="1"
+		android:gravity="center_vertical" >
+        <TextView 
+            android:text="@string/Thursday" 
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
+	</TableRow>
+
+	<TableRow
+		android:id="@+id/tableRow6"
+		android:background="#00CCCC"
+		android:layout_width="fill_parent"
+		android:layout_margin="1dp" 
+		android:layout_height="match_parent" 
+		android:layout_weight="1"
+		android:gravity="center_vertical" >
+        <TextView 
+            android:text="@string/Friday"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
+	</TableRow>
+
+	<TableRow
+		android:id="@+id/tableRow7"
+		android:background="#00CCCC"
+		android:layout_width="fill_parent"
+		android:layout_margin="1dp" 
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center_vertical" >
+        <TextView 
+            android:text="@string/Saturday"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
+	</TableRow>
+
+</TableLayout>

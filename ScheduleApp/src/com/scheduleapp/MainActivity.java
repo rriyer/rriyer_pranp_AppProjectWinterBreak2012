@@ -36,13 +36,13 @@ public class MainActivity extends Activity {
 		ParseACL.setDefaultACL(defaultACL, true);
 		ParseObject a = new ParseObject("test");
 		a.put("foo", "bar");
-        Button signUp = (Button)findViewById(R.id.button2);
-        Button logIn = (Button)findViewById(R.id.button1);
+        Button signUp = (Button)findViewById(R.id.loginButton);
+        Button logIn = (Button)findViewById(R.id.registerButton);
         logIn.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
-        		TextView username = (TextView)findViewById(R.id.editText1);
+        		TextView username = (TextView)findViewById(R.id.emailText);
  				String name = username.getText().toString();
- 				TextView password = (TextView)findViewById(R.id.editText2);
+ 				TextView password = (TextView)findViewById(R.id.passwordText);
  				String pass = password.getText().toString();
  				 Log.i("logging in", "The login button was hit");
  				ParseUser.logInInBackground(name,pass, new LogInCallback() {
@@ -60,9 +60,9 @@ public class MainActivity extends Activity {
         });
         signUp.setOnClickListener(new OnClickListener(){
 			public void onClick(View v){
-				TextView username = (TextView)findViewById(R.id.editText1);
+				TextView username = (TextView)findViewById(R.id.emailText);
 				String name = "a";//username.getText().toString();
-				TextView password = (TextView)findViewById(R.id.editText2);
+				TextView password = (TextView)findViewById(R.id.passwordText);
 				String pass ="a"; //password.getText().toString();
 				Log.i("signing up", "the signup button was hit");
 				ParseUser user = new ParseUser();

@@ -8,5 +8,12 @@
     <string name="Register">Register</string>
     <string name="Password">Password</string>
     <string name="app_name">Schedule App</string>
+    <string name="Tuesday">Tues</string>
+    <string name="Monday">Mon</string>
+    <string name="Wednesday">Wed</string>
+    <string name="Sunday">Sun</string>
+    <string name="Thursday">Thu</string>
+    <string name="Friday">Fri</string>
+    <string name="Saturday">Sat</string>
 
 </resources>
